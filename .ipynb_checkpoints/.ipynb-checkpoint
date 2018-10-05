@@ -145,7 +145,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 8,
    "metadata": {},
    "outputs": [
     {
@@ -156,7 +156,7 @@
        "           weights='distance')"
       ]
      },
-     "execution_count": 7,
+     "execution_count": 8,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -164,10 +164,8 @@
    "source": [
     "#Train model\n",
     "\n",
-    "knn_clf_unif_p1.fit(X_train,y_train)\n",
-    "knn_clf_unif_p2.fit(X_train,y_train)\n",
-    "knn_clf_dist_p1.fit(X_train,y_train)\n",
-    "knn_clf_dist_p2.fit(X_train,y_train)"
+    "knn_clf_unif.fit(X_train,y_train)\n",
+    "knn_clf_dist.fit(X_train,y_train)"
    ]
   },
   {
@@ -179,14 +177,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████████████████████████████████████████████████████████████████████| 14000/14000 [1:08:48<00:00,  3.71it/s]\n"
+      "100%|████████████████████████████████████████████████████████████████████████████| 14000/14000 [36:17<00:00,  7.17it/s]\n"
      ]
     }
    ],
@@ -205,17 +203,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 11,
    "metadata": {},
    "outputs": [
     {
      "name": "stdout",
      "output_type": "stream",
      "text": [
-      "Uniform manhattan dist:  0.9555 \n",
-      "Uniform euclidean dist:  0.94 \n",
-      "Distance manhattan dist:  0.9584285714285714 \n",
-      "Distance euclidean dist:  0.9416428571428571\n"
+      "0.94   0.9416428571428571\n"
      ]
     }
    ],
@@ -227,15 +222,8 @@
     "acc_dist_p1 = accuracy_score(y_pred_dist_p1, y_test)\n",
     "acc_dist_p2 = accuracy_score(y_pred_dist_p2, y_test)\n",
     "print(\"Uniform manhattan dist: \", acc_unif_p1,\"\\nUniform euclidean dist: \", acc_unif_p2,\n",
-    "      \"\\nDistance manhattan dist: \", acc_dist_p1,\"\\nDistance euclidean dist: \", acc_dist_p2)"
+    "      \"Distance manhattan dist: \", acc_dist_p1,\"\\nDistance euclidean dist: \", acc_dist_p2)"
    ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "metadata": {},
-   "outputs": [],
-   "source": []
   }
  ],
  "metadata": {
